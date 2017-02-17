@@ -103,20 +103,25 @@ var custom = 'body { \
     padding: 5px 12px !important; \
     border-radius: 3px !important; \
     border: none !important; \
+    margin-left: 5px!important;\
+    min-width: 84px!important;\
 } \
+#cancel-editing-button{\
+    max-width: 84px !important;\
+}\
 #input-table td.chat-input { \
     width: 398px !important; \
 } \
 #input { \
     padding: 2px !important; \
-    width: 406px !important; \
+    width: 100% !important; \
     background: transparent !important; \
     border-color: transparent !important; \
     outline: none !important; \
     border: none !important; \
     resize: none !important; \
     -webkit-box-shadow: 0 -2px 0 #c0c0c0 !important; \
-            box-shadow: 0 -2px 0 #c0c0c0 inset !important; \
+    box-shadow: 0 -2px 0 #c0c0c0 inset !important; \
     transition: all .5s !important; \
 } \
 #input:focus { \
@@ -158,9 +163,18 @@ var custom = 'body { \
     min-height: 12px !important; \
 } \
 #footer-logo { \
-    background: #f4f2f2 !important; \
+    background: #fdfdfb !important \
     border-radius: 2px !important; \
 } \
+#footer-legal{\
+    display: none !important;\
+}\
+#input-table td.chat-input{\
+    width: 1050px!important;\
+}\
+#footer-logo{\
+    display:none !important;\
+}\
 #sidebar #info #roomtitle { \
     text-shadow: none !important; \
     text-align: center !important; \
