@@ -1,6 +1,6 @@
 // ==UserScript==
-// @name         CleanChat
-// @namespace    stackuserflow-whatsApp
+// @name         CleanChat-WhatsApp
+// @namespace    stackuserflow-WhatsApp
 // @version      0.1.2
 // @description  Muda o visual do chat para algo mais simples
 // @author       Guilherme Nascimento
