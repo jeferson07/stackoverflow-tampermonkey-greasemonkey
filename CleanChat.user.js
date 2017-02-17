@@ -1,9 +1,10 @@
 // ==UserScript==
 // @name         CleanChat
-// @namespace    stackuserflow
+// @namespace    stackuserflow-whatsApp
 // @version      0.1.2
 // @description  Muda o visual do chat para algo mais simples
 // @author       Guilherme Nascimento
+// @subauthor    Renilson Andrade
 // @match        *://chat.stackoverflow.com/rooms/*
 // @match        *://chat.stackexchange.com/rooms/*
 // @exclude      *://chat.stackoverflow.com/rooms/info/*
