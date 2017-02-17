@@ -129,7 +129,7 @@ var custom = 'body { \
             box-shadow: 0 -3px 0 #5fba7d inset !important; \
 } \
 #input-area { \
-    width: 72% !important; \
+    left: 20.2%!important;\
     background: #fdfdfb !important; \
     border-top: 1px #d8d1d1 solid !important; \
     z-index: 6 !important; \
@@ -170,15 +170,69 @@ var custom = 'body { \
     display: none !important;\
 }\
 #input-table td.chat-input{\
-    width: 1050px!important;\
+    width: 1200px!important;\
 }\
 #footer-logo{\
     display:none !important;\
+}\
+#sidebar{\
+    right: 79.9% !important;\
+    max-width: 20%!important;\
+}\
+#chat{\
+    left: 43% !important;\
+}\
+#present-users > .present-user{\
+    min-width: 99.5%!important;\
+    padding: 5px 0 0 0!important;\
+    box-shadow: 0 -2px 0 #5fba7d inset !important;\
+    cursor: pointer!important;\
+}\
+#present-users > .present-user:hover{\
+    background-color: #ceead4!important;\
+}\
+#present-users{\
+    overflow-y: scroll!important;\
+    max-height: 300px!important;\
+}\
+#getmore{\
+    margin-left: 50%!important;\
+}\
+p.user-name{\
+    position: relative!important;\
+    display: inline-block!important;\
+    top: -10px!important;\
+    height: 100%!important;\
+}\
+li > div.avatar{\
+    max-width: 50px!important;\
+    display: inline-block!important;\
+    margin-right: 15px!important;\
 }\
 #sidebar #info #roomtitle { \
     text-shadow: none !important; \
     text-align: center !important; \
 }';
+    
+      function referenciar()
+    {
+        var user = this.getAttribute('data-user');
+        var input = document.getElementById("input");
+        input.value = '@' + user.replace(' ', '') + ' ';
+        input.focus();
+    }
+    
+    function createLabels()
+    {
+        var arr = doc.getElementsByClassName("present-user user-container");
+        for (var i = 0, len = arr.length; i < len; i++) {
+            var name = arr[i].childNodes[0].childNodes[0].title;
+            var temp ='<p class="user-name">' +name+ '</p>';
+            arr[i].insertAdjacentHTML('beforeend', temp);
+            arr[i].setAttribute('data-user', name);
+            arr[i].onclick = referenciar;
+        }
+    }
 
     function trigger()
     {
@@ -187,6 +241,7 @@ var custom = 'body { \
         doc.head.appendChild(s);
 
         setTimeout(placeholder, 800);
+        setTimeout(createLabels, 800);
     }
 
     function placeholder()
